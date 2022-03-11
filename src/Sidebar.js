@@ -3,13 +3,11 @@ import Sugestoes from "./Sugestoes";
 export default function Sidebar() {
   return (
     <div class="sidebar">
-      <div class="usuario">
-        <img src="assets/img/catanacomics.svg" />
-        <div class="texto">
-          <strong>catanacomics</strong>
-          Catana
-        </div>
-      </div>
+      <Usuario
+        image="assets/img/catanacomics.svg"
+        user="catanacomics"
+        name="Catana"
+      />
       <Sugestoes />
 
       <div class="links">
@@ -18,6 +16,18 @@ export default function Sidebar() {
       </div>
 
       <div class="copyright">© 2021 INSTAGRAM DO FACEBOOK</div>
+    </div>
+  );
+}
+
+function Usuario(props) {
+  return (
+    <div class="usuario">
+      <img src={props.image} alt="" />
+      <div class="texto">
+        <strong>{props.user}</strong>
+        {props.name}
+      </div>
     </div>
   );
 }
