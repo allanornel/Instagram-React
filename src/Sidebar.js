@@ -3,11 +3,7 @@ import Sugestoes from "./Sugestoes";
 export default function Sidebar() {
   return (
     <div class="sidebar">
-      <Usuario
-        image="assets/img/catanacomics.svg"
-        user="catanacomics"
-        name="Catana"
-      />
+      <Usuario user="catanacomics" name="Catana" />
       <Sugestoes />
 
       <div class="links">
@@ -21,9 +17,10 @@ export default function Sidebar() {
 }
 
 function Usuario(props) {
+  const src = `assets/img/${props.user}.svg`;
   return (
     <div class="usuario">
-      <img src={props.image} alt="" />
+      <img src={src} alt="" />
       <div class="texto">
         <strong>{props.user}</strong>
         {props.name}
