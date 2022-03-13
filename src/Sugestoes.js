@@ -20,15 +20,15 @@ export default function Sugestoes() {
   );
 }
 
-function Sugestao(props) {
-  const src = `assets/img/${props.user}.svg`;
+function Sugestao({ user, reason }) {
+  const src = `assets/img/${user}.svg`;
   return (
     <div class="sugestao">
       <div class="usuario">
         <img src={src} alt="" />
         <div class="texto">
-          <div class="nome">{props.user}</div>
-          <div class="razao">{props.reason}</div>
+          <div class="nome">{user}</div>
+          <div class="razao">{reason}</div>
         </div>
       </div>
 

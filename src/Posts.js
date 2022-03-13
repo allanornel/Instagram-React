@@ -29,16 +29,16 @@ export default function Posts() {
   );
 }
 // <Post user="" imagePost="" userLike="" likes=""/>
-function Post(props) {
-  const srcUser = `assets/img/${props.user}.svg`;
-  const srcUserLike = `assets/img/${props.userLike}.svg`;
+function Post({ user, userLike, imagePost, likes }) {
+  const srcUser = `assets/img/${user}.svg`;
+  const srcUserLike = `assets/img/${userLike}.svg`;
 
   return (
     <div class="post">
       <div class="topo">
         <div class="usuario">
           <img src={srcUser} alt="" />
-          {props.user}
+          {user}
         </div>
         <div class="acoes">
           <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -46,7 +46,7 @@ function Post(props) {
       </div>
 
       <div class="conteudo">
-        <img src={props.imagePost} alt="" />
+        <img src={imagePost} alt="" />
       </div>
 
       <div class="fundo">
@@ -64,8 +64,8 @@ function Post(props) {
         <div class="curtidas">
           <img src={srcUserLike} alt="" />
           <div class="texto">
-            Curtido por <strong>{props.userLike}</strong> e{" "}
-            <strong>outras {props.likes} pessoas</strong>
+            Curtido por <strong>{userLike}</strong> e{" "}
+            <strong>outras {likes} pessoas</strong>
           </div>
         </div>
       </div>

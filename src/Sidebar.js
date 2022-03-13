@@ -16,14 +16,14 @@ export default function Sidebar() {
   );
 }
 
-function Usuario(props) {
-  const src = `assets/img/${props.user}.svg`;
+function Usuario({ user, name }) {
+  const src = `assets/img/${user}.svg`;
   return (
     <div class="usuario">
       <img src={src} alt="" />
       <div class="texto">
-        <strong>{props.user}</strong>
-        {props.name}
+        <strong>{user}</strong>
+        {name}
       </div>
     </div>
   );

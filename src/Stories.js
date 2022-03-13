@@ -21,14 +21,14 @@ export default function Stories() {
   );
 }
 
-function Story(props) {
-  const src = `assets/img/${props.user}.svg`;
+function Story({ user }) {
+  const src = `assets/img/${user}.svg`;
   return (
     <div class="story">
       <div class="imagem">
         <img src={src} alt="" />
       </div>
-      <div class="usuario">{props.user}</div>
+      <div class="usuario">{user}</div>
     </div>
   );
 }
